@@ -1,0 +1,42 @@
+<ion-content [fullscreen]="true">
+  <ion-img
+    class="background-login"
+    [ngClass]="{ 'is-loaded': isLoaded }"
+    src="assets/images/background_login.png"
+    alt="Imagem de ônibus desfocada"
+  ></ion-img>
+
+  <div class="div-principal" [ngClass]="{ 'is-loaded': isLoaded }">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Login</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="inputs-login">
+          <ion-input
+            type="email"
+            fill="solid"
+            label="Email"
+            labelPlacement="floating"
+            errorText="E-mail inválido"
+            [(ngModel)]="email"
+            email
+          ></ion-input>
+
+          <ion-input
+            type="password"
+            fill="solid"
+            label="Senha"
+            labelPlacement="floating"
+            errorText="Senha inválida"
+            ngModel
+            [(ngModel)]="senha"
+            senha
+          >
+          </ion-input>
+          <ion-button (click)="login()" size="default">Entrar</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

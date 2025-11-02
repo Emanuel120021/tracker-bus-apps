@@ -2,6 +2,5 @@
 
 export const environment = {
   production: false,
-  // Adicione esta linha:
-  apiUrl: 'http://localhost:3000', // Sua API NestJS rodando localmente
+  apiUrl: 'http://192.168.1.84:3000',
 };

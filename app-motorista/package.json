@@ -9,7 +9,8 @@
     "build": "ng build",
     "dev": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "android": "ionic build && ionic cap sync android && ionic cap run android -l --external"
   },
   "private": true,
   "dependencies": {

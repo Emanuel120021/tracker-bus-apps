@@ -1,0 +1,45 @@
+/* Garante que o ion-content possa ter elementos "flutuando" por cima */
+ion-content {
+  position: relative;
+}
+
+.background-login {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+
+  transition: filter 1.2s ease-in-out;
+
+  filter: grayscale(0%) brightness(100%);
+}
+
+.background-login.is-loaded {
+  filter: grayscale(70%) brightness(80%);
+}
+
+.div-principal {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: opacity 1s ease-in-out 0.5s, transform 1s ease-in-out 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+  .inputs-login {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.div-principal.is-loaded {
+  opacity: 1;
+  transform: translateY(0);
+}

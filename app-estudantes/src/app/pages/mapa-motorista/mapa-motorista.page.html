@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Painel do Aluno</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="getMyLocation()">
+        <ion-icon name="locate-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)="reloadMap()">
+        <ion-icon name="refresh-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="map"></div>
+
+  <!-- Loading overlay -->
+  <div class="loading-overlay" *ngIf="isLoading">
+    <ion-spinner name="crescent" color="primary"></ion-spinner>
+    <p>Carregando mapa...</p>
+  </div>
+</ion-content>
